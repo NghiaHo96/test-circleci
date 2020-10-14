@@ -1,0 +1,31 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+jobs:
+  deploy:
+    docker: 
+      - image: circleci/ruby:2.4.1
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - fc:7d:fb:f7:67:93:1f:ec:20:b1:69:01:be:95:4a:2d
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run build
+
+
+workflows:
+  welcome:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main
