@@ -2,8 +2,8 @@
 version: 2.1
 jobs:
   deploy:
-    docker: 
-      - image: circleci/ruby:2.4.1
+    docker:
+      - image: cimg/node:12.16
     steps:
       - checkout
       - restore_cache:
