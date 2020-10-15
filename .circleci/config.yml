@@ -5,9 +5,6 @@ jobs:
     docker: 
       - image: circleci/ruby:2.4.1
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - fc:7d:fb:f7:67:93:1f:ec:20:b1:69:01:be:95:4a:2d
       - checkout
       - restore_cache:
           keys:
