@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "node ./upload.js"
+    "deploy": "node upload"
   },
   "eslintConfig": {
     "extends": "react-app"
