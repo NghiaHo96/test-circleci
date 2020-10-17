@@ -1,6 +1,5 @@
 {
   "name": "test-circleci",
-  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "node upload"
+    "deploy": "node upload.js"
   },
   "eslintConfig": {
     "extends": "react-app"
