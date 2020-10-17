@@ -4,12 +4,12 @@ const fs = require("fs");
 
 const basePath = "./build"; //Thư mục chứa code đã export mặc định của nextjs
 
-const destinationPath = "/public_html/khanhngo.cf/testcircleci"; //Thư mục chúng ta muốn bỏ code vào trên server
+const destinationPath = "/htdocs"; //Thư mục chúng ta muốn bỏ code vào trên server
 const config = {
 //Sử dụng biến môi trường để đảm bảo an toàn nhé! Chúng ta sẽ set biến sau.
-    host: 'tp.khanhngoc.cf',
-    password: 'bon5108922',
-    user: 'testcircleci@khanhngo.cf',
+    host: 'ftpupload.net',
+    password: 'QMVJFosFIXx7faO',
+    user: 'epiz_26912081',
 };
 
 const ftpClient = new FtpClient(); //Khởi tạo một object của class FtpClient
